@@ -17,24 +17,24 @@ Bolt is designed as a distributed system with several key components working in 
 ```mermaid
 graph TD
     subgraph "User's Browser"
-        Frontend[Next.js Web Application]
+        Frontend["Next.js Web Application"]
     end
 
     subgraph "Cloud Infrastructure (AWS/GCP/Azure)"
         subgraph "API Layer"
-            PrimaryBackend[Primary Backend (Node.js/Express)]
+            PrimaryBackend["Primary Backend Node.js/Express"]
         end
 
         subgraph "AI Worker Fleet"
-            WorkerOrchestrator[Worker Orchestrator]
-            Worker1[Worker 1 (Docker Container)]
-            Worker2[Worker 2 (Docker Container)]
-            WorkerN[... (Docker Containers)]
+            WorkerOrchestrator["Worker Orchestrator"]
+            Worker1["Worker 1 Docker Container"]
+            Worker2["Worker 2 Docker Container"]
+            WorkerN["... Docker Containers"]
         end
 
         subgraph "Data & State Management"
-            DB[(PostgreSQL Database)]
-            Redis[(Redis Cache)]
+            DB["PostgreSQL Database"]
+            Redis["Redis Cache"]
         end
     end
 
